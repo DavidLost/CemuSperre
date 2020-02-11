@@ -37,7 +37,7 @@ class Window : JFrame() {
         field.addActionListener { onButtonClick() }
         button.addActionListener { onButtonClick() }
 
-        title = "Mario Kart Verbot :)"
+        title = "Cemu Sperre :)"
         defaultCloseOperation = EXIT_ON_CLOSE
         isAlwaysOnTop = true
         isResizable = false
@@ -57,7 +57,7 @@ class Window : JFrame() {
             exitProcess(0)
         }
         else {
-            JOptionPane.showMessageDialog(this, "That was not the right Password!", "Error", JOptionPane.ERROR_MESSAGE)
+            JOptionPane.showMessageDialog(this, "Das war wohl falsch :(", "Error", JOptionPane.ERROR_MESSAGE)
         }
     }
 

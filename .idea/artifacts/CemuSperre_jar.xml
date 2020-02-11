@@ -1,13 +1,14 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="MarioKartVerbot:jar">
+  <artifact type="jar" name="CemuSperre:jar">
     <output-path>$USER_HOME$/Desktop</output-path>
-    <root id="archive" name="MarioKartVerbot.jar">
+    <root id="archive" name="CemuSperre.jar">
       <element id="module-output" name="CemuSperre" />
       <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-stdlib.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-reflect.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-test.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk7.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Java Librarays/jsch-0.1.54.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
