@@ -1,4 +1,4 @@
-package de.david.mario
+package de.david.lock
 
 import java.awt.*
 import java.io.File

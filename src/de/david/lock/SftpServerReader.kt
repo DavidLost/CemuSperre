@@ -1,4 +1,4 @@
-package de.david.mario
+package de.david.lock
 
 import com.jcraft.jsch.ChannelSftp
 import com.jcraft.jsch.JSch

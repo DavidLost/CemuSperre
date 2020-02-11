@@ -1,4 +1,4 @@
-package de.david.mario;
+package de.david.lock;
 
 public class Main {
     public static void main(String[] args) {
