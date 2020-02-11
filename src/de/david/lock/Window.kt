@@ -1,6 +1,7 @@
 package de.david.lock
 
 import java.awt.*
+import java.awt.event.ActionEvent
 import java.io.File
 import java.security.MessageDigest.getInstance
 import java.security.NoSuchAlgorithmException
@@ -33,6 +34,7 @@ class Window : JFrame() {
         image.add(field, Component.CENTER_ALIGNMENT)
         image.add(button, Component.BOTTOM_ALIGNMENT)
         add(image)
+        field.addActionListener { onButtonClick() }
         button.addActionListener { onButtonClick() }
 
         title = "Mario Kart Verbot :)"
@@ -50,8 +52,13 @@ class Window : JFrame() {
         val args = Array(SftpServerReader.ARG_AMOUNT) { i -> serverArgs[i].split(": ").last() }
         val serverReader = SftpServerReader(SftpServerReader.createArgs(args)!!)
         val passwordHash = serverReader.getFileText(PASSWORD_FILE_PATH).first()
-        if (userHash == passwordHash) Runtime.getRuntime().exec(EXECUTION_PATH)
-        exitProcess(0)
+        if (userHash == passwordHash) {
+            Runtime.getRuntime().exec(EXECUTION_PATH)
+            exitProcess(0)
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "That was not the right Password!", "Error", JOptionPane.ERROR_MESSAGE)
+        }
     }
 
     @Throws(NoSuchAlgorithmException::class)
