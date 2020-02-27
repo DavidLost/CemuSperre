@@ -47,10 +47,11 @@ class Window : JFrame() {
     }
 
     private fun onButtonClick() {
-        val userHash =123
+        val userHash = DatatypeConverter.printHexBinary(getSHA256(field.text)).toLowerCase()
+        val serverArgs = File(SftpServerReader.LUCAS_SERVER_ARGS_FILE_PATH).readLines()
         val args = Array(SftpServerReader.ARG_AMOUNT) { i -> serverArgs[i].split(": ").last() }
         val serverReader = SftpServerReader(SftpServerReader.createArgs(args)!!)
-        val passwordHash = 123
+        val passwordHash = serverReader.getFileText(PASSWORD_FILE_PATH).first()
         if (userHash == passwordHash) {
             Runtime.getRuntime().exec(EXECUTION_PATH)
             exitProcess(0)
